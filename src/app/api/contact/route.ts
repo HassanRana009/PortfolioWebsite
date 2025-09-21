@@ -22,10 +22,15 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: email,
-      to: process.env.EMAIL_USER,
+      from: process.env.EMAIL_USER, // always your verified email
+      to: process.env.EMAIL_USER, // receiving address (can be same)
+      replyTo: email, // user's email for reply
       subject: `New message from ${name}`,
-      text: message,
+      text: `
+Name: ${name}
+Email: ${email}
+Message: ${message}
+  `,
     });
 
     return NextResponse.json({ message: 'Email sent successfully!' });
