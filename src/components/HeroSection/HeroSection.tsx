@@ -54,19 +54,41 @@ const HeroSection = () => {
             Lets Talk <MessageCircle />
           </button>
           <button className={styles.outline}>
-            Download CV <Download />
+            <Download />
+            <a
+              href="/Muhammad Hassan Rana.pdf"
+              download="Muhammad Hassan Rana.pdf"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              Download CV
+            </a>
           </button>
         </div>
 
         {/* 🌐 Social Buttons */}
         <div className={styles.socialButtons}>
-          <button>
+          <button
+            onClick={() =>
+              (window.location.href = 'mailto:iamhassanrana265@gmail.com')
+            }
+          >
             <Mail />
           </button>
-          <button>
+          <button
+            onClick={() =>
+              window.open('https://github.com/HassanRana009', '_blank')
+            }
+          >
             <Github />
           </button>
-          <button>
+          <button
+            onClick={() =>
+              window.open(
+                'https://www.linkedin.com/in/muhammadhassanrana/',
+                '_blank'
+              )
+            }
+          >
             <Linkedin />
           </button>
         </div>

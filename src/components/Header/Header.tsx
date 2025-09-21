@@ -49,7 +49,14 @@ const Header = () => {
             <Mail size={16} /> <span>iamhassanrana265@gmail.com</span>
           </div>
           <button className={styles.cvBtn}>
-            <Download size={16} /> Download CV
+            <Download size={16} />
+            <a
+              href="/Muhammad Hassan Rana.pdf"
+              download="Muhammad Hassan Rana.pdf"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              Download CV
+            </a>
           </button>
         </div>
 

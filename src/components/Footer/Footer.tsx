@@ -70,10 +70,25 @@ const Footer = () => {
           Get in touch
         </button>
         <div className={styles.socials}>
-          <a href="#" aria-label="Github">
+          <a
+            href="#"
+            aria-label="Github"
+            onClick={() =>
+              window.open('https://github.com/HassanRana009', '_blank')
+            }
+          >
             <Github />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            onClick={() =>
+              window.open(
+                'https://www.linkedin.com/in/muhammadhassanrana/',
+                '_blank'
+              )
+            }
+          >
             <Linkedin />
           </a>
         </div>
