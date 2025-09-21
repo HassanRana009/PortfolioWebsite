@@ -37,9 +37,19 @@ import Endura6 from '../../../public/images/Endura/Endura6.png';
 import Endura7 from '../../../public/images/Endura/Endura7.png';
 import Endura8 from '../../../public/images/Endura/Endura8.png';
 import yotoExt1 from '../../../public/images/yotoExt/image.png';
+import { StaticImageData } from 'next/image';
+interface Project {
+  image: StaticImageData;
+  title: string;
+  summary: string;
+  technologies: string[];
+  overview: string;
+  features: string[];
+  images?: StaticImageData[]; // optional additional images
+}
 
 const FeaturedProjects = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [mainImage, setMainImage] = useState<string>('');
 
   const cardData = [
@@ -226,7 +236,8 @@ const FeaturedProjects = () => {
     },
   ];
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
+    if (!project.images) return;
     setSelectedProject(project);
     setMainImage(project.images[0].src);
   };
@@ -316,15 +327,18 @@ const FeaturedProjects = () => {
               <div className={styles.modalRight}>
                 <img className={styles.mainImage} src={mainImage} alt="main" />
                 <div className={styles.thumbnailContainer}>
-                  {selectedProject.images.map((img: any, i: number) => (
-                    <img
-                      key={i}
-                      src={img.src}
-                      alt={`thumb-${i}`}
-                      className={`${styles.thumbnail} ${mainImage === img.src ? styles.activeThumbnail : ''}`}
-                      onClick={() => setMainImage(img.src)}
-                    />
-                  ))}
+                  {selectedProject.images &&
+                    selectedProject.images.map(
+                      (img: StaticImageData, i: number) => (
+                        <img
+                          key={i}
+                          src={img.src}
+                          alt={`thumb-${i}`}
+                          className={`${styles.thumbnail} ${mainImage === img.src ? styles.activeThumbnail : ''}`}
+                          onClick={() => setMainImage(img.src)}
+                        />
+                      )
+                    )}
                 </div>
               </div>
             </div>
