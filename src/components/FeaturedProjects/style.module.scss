@@ -14,6 +14,7 @@
     letter-spacing: -1px;
     background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(261, 83%, 58%));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease;
 
@@ -75,10 +76,15 @@
       hsl(217, 91%, 60%)
     );
     background-size: 200% 100%;
+    // Webkit prefix for older browsers (must come first)
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    // Standard mask property for Firefox and modern browsers
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     mask-composite: exclude;
     opacity: 0;
     pointer-events: none;
@@ -210,9 +216,17 @@
   max-width: 90%;
   width: 100%;
   max-height: 90vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
+  
+  // Hide scrollbar but keep scrolling functionality
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
 
 .closeBtn {
