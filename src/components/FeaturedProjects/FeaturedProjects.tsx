@@ -37,6 +37,36 @@ import Endura6 from '../../../public/images/Endura/Endura6.png';
 import Endura7 from '../../../public/images/Endura/Endura7.png';
 import Endura8 from '../../../public/images/Endura/Endura8.png';
 import yotoExt1 from '../../../public/images/yotoExt/image.png';
+import TimberCraftThumbnail from '../../../public/images/TimberCraft/TimberCraftThumbnail.png'
+import TraderateThumbnail from '../../../public/images/Traderate/Traderatethumbnail.png'
+import YotoThumbnail from "../../../public/images/yoto/Yotothumbnail.png"
+import CarvillaThumbnail from "../../../public/images/Carvilla/CarvillaThumbnail.png"
+import EnduraThumbnail from "../../../public/images/Endura/EnduraThumbnail.png"
+import FuncsuiteThumbnail from "../../../public/images/Funcsuite/FuncsuiteThumbnail.png"
+import FuncsuiteImg1 from "../../../public/images/Funcsuite/FuncsuiteImg1.png"
+import FuncsuiteImg2 from "../../../public/images/Funcsuite/FuncsuiteImg2.png"
+import FuncsuiteImg3 from "../../../public/images/Funcsuite/FuncsuiteImg3.png"
+import FuncsuiteImg4 from "../../../public/images/Funcsuite/FuncsuiteImg4.png"
+import FuncsuiteImg5 from "../../../public/images/Funcsuite/FuncsuiteImg5.png"
+import FuncsuiteImg6 from "../../../public/images/Funcsuite/FuncsuiteImg6.png"
+import MedThumbnail from "../../../public/images/MedicalStore/Medthumbnail.png"
+import Med1 from "../../../public/images/MedicalStore/Med1.png"
+import Med2 from "../../../public/images/MedicalStore/Med2.png"
+import Med3 from "../../../public/images/MedicalStore/Med3.png"
+import Med4 from "../../../public/images/MedicalStore/Med4.png"
+import Med5 from "../../../public/images/MedicalStore/Med5.png"
+import Med6 from "../../../public/images/MedicalStore/Med6.png"
+import Med7 from "../../../public/images/MedicalStore/Med7.png"
+import Med8 from "../../../public/images/MedicalStore/Med8.png"
+import Med9 from "../../../public/images/MedicalStore/Med9.png"
+import Med10 from "../../../public/images/MedicalStore/Med10.png"
+import Med11 from "../../../public/images/MedicalStore/Med11.png"
+import Med12 from "../../../public/images/MedicalStore/Med12.png"
+import Med13 from "../../../public/images/MedicalStore/Med13.png"
+import Med14 from "../../../public/images/MedicalStore/Med14.png"
+import Med15 from "../../../public/images/MedicalStore/Med15.png"
+import Med16 from "../../../public/images/MedicalStore/Med16.png"
+
 import { StaticImageData } from 'next/image';
 interface Project {
   image: StaticImageData;
@@ -54,7 +84,7 @@ const FeaturedProjects = () => {
 
   const cardData = [
     {
-      image: yotofrontPic,
+      image: YotoThumbnail,
       title: 'Yoto Application',
       summary:
         'Yoto.ai intelligently searches across data-driven profiles to surface individuals who align with your skills, values, and culture.',
@@ -77,7 +107,7 @@ const FeaturedProjects = () => {
       images: [yotofrontPic, yoto1, yoto2, yoto3, yoto4],
     },
     {
-      image: traderatefrontPic,
+      image: TraderateThumbnail,
       title: 'Trading Application',
       summary:
         'Step into the future of finance with Traderate, a smart trading platform built for precision and performance.',
@@ -109,7 +139,7 @@ const FeaturedProjects = () => {
       ],
     },
     {
-      image: TimberfrontPic,
+      image: TimberCraftThumbnail,
       title: 'TimberCraft Application',
       summary:
         'Streamline your business with Timber Craft, an all-in-one platform for portfolio and client management.',
@@ -140,7 +170,7 @@ const FeaturedProjects = () => {
       ],
     },
     {
-      image: CarvillafrontPic,
+      image: CarvillaThumbnail,
       title: 'Carvilla Application',
       summary:
         'Carvilla is your all-in-one car management solution. From tracking vehicle portfolios to managing clients.',
@@ -173,7 +203,7 @@ const FeaturedProjects = () => {
       ],
     },
     {
-      image: EndurafrontPic,
+      image: EnduraThumbnail,
       title: 'Endura Application',
       summary:
         'EnduraGrowth Solutions empowers startups and SMBs with intelligent, data-driven marketing solutions.',
@@ -233,6 +263,88 @@ const FeaturedProjects = () => {
         'Secure Data Handling — Ensures all captured information is stored and managed securely.',
       ],
       images: [yotoExtFront, yotofrontPic, yotoExt1],
+    },
+     {
+      image: FuncsuiteThumbnail,
+      title: 'Funcsuite Excel Add-in',
+     summary:
+  'FUNC SUITE TOOL is an Excel Add-in that enables users to execute custom functions from remote APIs directly in Excel. It streamlines API integration, license management, and bulk data operations while providing a modern, secure, and user-friendly interface.',
+technologies: [
+  'React',
+  'TypeScript',
+  'Redux Toolkit',
+  'React Query (TanStack Query)',
+  'Fluent UI',
+  'React Router DOM',
+  'Axios',
+  'Crypto-js',
+  'Webpack',
+  'Babel',
+  'ESLint',
+  'Prettier',
+  'Office.js',
+  'Supabase'
+],
+overview:
+  'FUNC SUITE TOOL addresses the challenge of integrating remote API functions directly into Excel spreadsheets. Users can execute API functions using simple =FC() formulas, manage licenses, perform bulk operations, and dynamically load functions without modifying Excel files. The tool emphasizes enterprise security, seamless integration, and a modern React-based UI for improved productivity.',
+features: [
+  'Custom Excel Functions — Execute remote API functions directly in Excel using =FC("functionName", param1, param2, ...). Supports multiple data types, automatic type conversion, and dynamic parameter validation.',
+  'License-Based Authentication — Secure license key and company ID authentication with encrypted storage, JWT-based tokens, automatic refresh, and session persistence.',
+  'Dynamic Function Management — Functions loaded dynamically from API endpoints with real-time updates, metadata caching, namespace support, and versioning.',
+  'Bulk Synchronization — Sync multiple Excel cells simultaneously, automatic bulk sync on workbook open, background synchronization, progress tracking, and optimized API calls.',
+  'Modern User Interface — React-based dashboard with Fluent UI components, license management, function browser, search functionality, real-time execution status, responsive design, and multi-language support.',
+  'Enterprise Security — Encrypted credential storage, secure API communication via HTTPS, rate limiting, timeout handling, and detailed error logging.',
+  'Developer Experience — TypeScript for type safety, hot module replacement, comprehensive error handling, logging, debugging, and optimized production builds.'
+],
+      images: [FuncsuiteImg1, FuncsuiteImg2, FuncsuiteImg3,FuncsuiteImg4,FuncsuiteImg5,FuncsuiteImg6],
+    },
+      {
+      image: MedThumbnail,
+      title: 'Pharmacy Systems',
+summary:
+  'Al-Makkah Medical Store is a comprehensive, production-ready pharmacy management system designed to streamline operations for pharmacies. It integrates inventory management, POS, purchase tracking, customer management, and business analytics into a single, user-friendly desktop application.',
+technologies: [
+  'React',
+  'TypeScript',
+  'Redux Toolkit',
+  'React Query (TanStack Query)',
+  'React Router',
+  'SCSS Modules',
+  'Recharts',
+  'Lucide React',
+  'Axios',
+  'React Toastify',
+  'jsPDF & jsPDF-AutoTable',
+  'html5-qrcode',
+  'react-qr-code',
+  'date-fns',
+  'React-to-print',
+  'Node.js',
+  'Express.js',
+  'Sequelize ORM',
+  'SQLite3',
+  'JWT',
+  'Bcrypt',
+  'Multer',
+  'CORS',
+  'dotenv',
+  'Electron',
+  'Electron Builder',
+  'NSIS Installer'
+],
+overview:
+  'Al-Makkah Medical Store is a full-stack desktop application built with Electron and React, providing pharmacies with a complete ecosystem for managing inventory, sales, purchases, customers, and analytics. The system offers offline capability, secure access control, automated inventory and purchase management, advanced reporting, and a modern, responsive interface designed to improve operational efficiency and customer service.',
+features: [
+  'Automated Inventory Management — Real-time stock tracking, batch-level management, expiry monitoring, low-stock alerts, and detailed inventory reports.',
+  'Advanced POS System — Complete sales interface with barcode/QR scanning, cart management, multiple payment options, discount handling, and professional invoice generation.',
+  'Purchase Management — Purchase order creation, supplier management, automatic stock updates, purchase history tracking, and reporting.',
+  'Business Analytics & Reporting — Real-time dashboards, sales/purchase trends, top-selling products, category-wise distribution, customizable reports, profit margin calculations, and export functionality.',
+  'Customer Management — Centralized customer database, purchase history tracking, spending analytics, contact management, and search/filter capabilities.',
+  'Security & Access Control — JWT authentication, role-based access control (Super Admin, Admin, User), password hashing, secure API endpoints, session management, and input validation.',
+  'Desktop Application — Electron-based, cross-platform desktop app with offline functionality, fast responsive UI, automated setup, and professional installer for Windows.',
+  'Additional Features — QR code generation for products, barcode scanner integration, employee management, product catalog with images, sales/purchase return tracking, multi-user support, and print functionality for invoices and reports.'
+],
+      images: [Med1, Med2, Med3,Med4,Med5,Med6,Med7,Med8,Med9,Med10,Med11,Med12,Med13,Med14,Med15,Med16],
     },
   ];
 
