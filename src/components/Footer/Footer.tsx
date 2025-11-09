@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import styles from './style.module.scss';
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Briefcase } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -90,6 +90,15 @@ const Footer = () => {
             }
           >
             <Linkedin />
+          </a>
+          <a
+            href="#"
+            aria-label="Upwork"
+            onClick={() =>
+              window.open('https://www.upwork.com/freelancers/~01ed33e57607189bc5', '_blank')
+            }
+          >
+            <Briefcase />
           </a>
         </div>
       </div>
